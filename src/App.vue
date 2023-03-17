@@ -1,19 +1,23 @@
 <script setup>
 import { RouterLink, RouterView } from 'vue-router'
 
+
 </script>
 
 <template>
   <header>
     <nav>
       <RouterLink to="/">Home</RouterLink>
+      <RouterLink to="/register">Register</RouterLink>
+      <RouterLink to="/login">Login</RouterLink>
     </nav>
   </header>
-  <WelcomeItem />
+  <router-view></router-view>
 </template>
 
-<style scoped>
+<style>
 header {
+  display: flex;
   line-height: 1.5;
   height: 10%;
   width: 100%;
@@ -25,11 +29,22 @@ header {
   margin: 0 auto 2rem;
 }
 
+main {
+  max-width: 100%;
+  max-height: 100%;
+
+  display: grid;
+  place-items: center;
+}
+
 nav {
   width: 100%;
   font-size: 12px;
   text-align: center;
   margin-top: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 nav a.router-link-exact-active {
