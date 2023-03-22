@@ -13,6 +13,7 @@
 </template>
 <script>
 export default {
+
     data() {
         return {
             email: '',
@@ -29,7 +30,6 @@ export default {
             }
 
             this.isLoading = true
-
 
             fetch('http://127.0.0.1:80/api/auth/login', {
                 method: 'POST',
@@ -49,6 +49,8 @@ export default {
                 .then(data => {
                     this.email = ''
                     this.password = ''
+                    localStorage.setItem('token', data.access_token);
+                    this.$root.isLoggedIn = true
                     this.$router.push('/')
 
                     // console.log(data)

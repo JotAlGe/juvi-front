@@ -1,6 +1,13 @@
 <script >
 import { RouterLink, RouterView } from 'vue-router'
 
+export default {
+  data() {
+    return {
+      isLoggedIn: false
+    }
+  }
+}
 </script>
 
 <template>
@@ -8,7 +15,10 @@ import { RouterLink, RouterView } from 'vue-router'
     <nav>
       <RouterLink to="/">Home</RouterLink>
       <RouterLink to="/register">Register</RouterLink>
-      <RouterLink to="/login">Login</RouterLink>
+      <!-- <RouterLink to="/login">Login</RouterLink> -->
+      <router-link :to="isLoggedIn ? '/logout' : '/login'">
+        {{ isLoggedIn ? 'Logout' : 'Login' }}
+      </router-link>
       <!-- <RouterLink v-else to="/dashboard">Logout</RouterLink> -->
     </nav>
   </header>
