@@ -1,6 +1,5 @@
-<script setup>
+<script >
 import { RouterLink, RouterView } from 'vue-router'
-
 
 </script>
 
@@ -10,6 +9,7 @@ import { RouterLink, RouterView } from 'vue-router'
       <RouterLink to="/">Home</RouterLink>
       <RouterLink to="/register">Register</RouterLink>
       <RouterLink to="/login">Login</RouterLink>
+      <!-- <RouterLink v-else to="/dashboard">Logout</RouterLink> -->
     </nav>
   </header>
   <router-view></router-view>
