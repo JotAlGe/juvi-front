@@ -1,4 +1,3 @@
-<!--  'http://127.0.0.1:80/api/auth/register'-->
 <template>
     <div>
         <h1>Registro de usuario</h1>
