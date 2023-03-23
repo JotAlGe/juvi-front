@@ -9,7 +9,8 @@
             <a class="forgot" href="#">Forgot Username?</a>
             <div v-if="err"> {{ err }} </div>
         </form>
-    </div><!--end log form -->
+    </div>
+    <!--end log form -->
 </template>
 <script>
 export default {

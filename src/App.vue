@@ -15,11 +15,9 @@ export default {
     <nav>
       <RouterLink to="/">Home</RouterLink>
       <RouterLink to="/register">Register</RouterLink>
-      <!-- <RouterLink to="/login">Login</RouterLink> -->
       <router-link :to="isLoggedIn ? '/logout' : '/login'">
         {{ isLoggedIn ? 'Logout' : 'Login' }}
       </router-link>
-      <!-- <RouterLink v-else to="/dashboard">Logout</RouterLink> -->
     </nav>
   </header>
   <router-view></router-view>
@@ -28,8 +26,7 @@ export default {
 <style>
 header {
   display: flex;
-  line-height: 1.5;
-  height: 10%;
+  height: 20%;
   width: 100%;
   max-height: 100vh;
 }
@@ -41,20 +38,20 @@ header {
 
 main {
   max-width: 100%;
-  max-height: 100%;
+  max-height: 90%;
 
   display: grid;
   place-items: center;
 }
 
 nav {
-  width: 100%;
   font-size: 12px;
   text-align: center;
-  margin-top: 2rem;
   display: flex;
   align-items: center;
   justify-content: center;
+  width: 100%;
+  height: 100%;
 }
 
 nav a.router-link-exact-active {
@@ -79,7 +76,6 @@ nav a:first-of-type {
   header {
     display: flex;
     place-items: center;
-    padding-right: calc(var(--section-gap) / 2);
   }
 
   .logo {
@@ -94,11 +90,9 @@ nav a:first-of-type {
 
   nav {
     text-align: left;
-    margin-left: -1rem;
     font-size: 1rem;
 
     padding: 1rem 0;
-    margin-top: 1rem;
   }
 }
 </style>
