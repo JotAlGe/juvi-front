@@ -1,28 +1,27 @@
 # juvi-front
 
-This template should help get you started developing with Vue 3 in Vite.
+Frontend, en vue 3, de [Juvi backend](https://github.com/JotAlGe/juvi/tree/develop)(api laravel).
 
-## Recommended IDE Setup
+## Configuración 
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
+Ver [Vite configuración](https://vitejs.dev/config/).
 
-## Customize configuration
+### Backend de este proyecto
+Ver :floppy_disk: [Juvi backend](https://github.com/JotAlGe/juvi/tree/develop)
 
-See [Vite Configuration Reference](https://vitejs.dev/config/).
-
-## Project Setup
+## Setup
 
 ```sh
 npm install
 ```
 
-### Compile and Hot-Reload for Development
+### Correr
 
 ```sh
 npm run dev
 ```
 
-### Compile and Minify for Production
+### En Production
 
 ```sh
 npm run build
