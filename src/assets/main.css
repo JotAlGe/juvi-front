@@ -1,13 +1,24 @@
 @import './base.css';
 
+body{
+  min-height: 100vh;
+}
 #app {
   width: 100%;
   max-width: 100%;
   margin: 0 auto;
-  /* padding: 2rem; */
   height: 100vh;
 
   font-weight: normal;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(12, 1fr);
+  padding: 0 5%;
+
+  background-image: url('/src/assets/images/banner-bg.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 a,
@@ -27,12 +38,5 @@ a,
   body {
     display: flex;
     place-items: center;
-  }
-
-  #app {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: .5fr 1fr;
-    padding: 0 2rem;
   }
 }
