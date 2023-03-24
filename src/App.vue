@@ -26,9 +26,10 @@ export default {
 <style>
 header {
   display: flex;
-  height: 20%;
   width: 100%;
   max-height: 100vh;
+
+  grid-row: 1 / 2;
 }
 
 .logo {
@@ -39,9 +40,15 @@ header {
 main {
   max-width: 100%;
   max-height: 90%;
+  grid-row: 2 / 12;
 
   display: grid;
   place-items: center;
+}
+
+main div {
+  height: 100%;
+  width: 100%;
 }
 
 nav {
