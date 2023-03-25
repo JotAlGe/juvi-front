@@ -1,12 +1,11 @@
 <script >
 import { RouterLink, RouterView } from 'vue-router'
-
 export default {
   data() {
     return {
       isLoggedIn: false
-    }
-  }
+    };
+  },
 }
 </script>
 

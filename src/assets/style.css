@@ -621,10 +621,11 @@ button {
 }
 .contact_section_2{
   width: 100%;
-  float: left;
   background-color: #f9f9fb;
   height: auto;
   margin-top: 50px;
+
+  display: flex;
 }
 .image_10{
   width: 100%;
@@ -782,3 +783,9 @@ input.mail_text::placeholder {
   margin-top: 0px;
 }
 
+
+@media (max-width: 600px) {
+ .contact_section_2{
+    flex-direction: column;
+ }   
+}
