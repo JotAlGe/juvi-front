@@ -13,7 +13,7 @@ body{
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: repeat(12, 1fr);
-  padding: 0 5%;
+  padding: 0 3%;
 
   background-image: url('/src/assets/images/banner-bg.png');
   background-position: center;
