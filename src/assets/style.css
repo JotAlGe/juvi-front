@@ -261,7 +261,7 @@ button {
 .banner_taital {
     width: 100%;
     font-size: 60px;
-    color: #679af5;
+    color: #A8D95F;
     text-transform: uppercase;
     font-weight: bold;
 
@@ -273,7 +273,7 @@ button {
     width: 100%;
     float: left;
     font-size: 70px;
-    color: #323232;
+    color: var(--color-background);
     text-transform: uppercase;
     font-weight: bold;
     line-height: 40px;
@@ -292,7 +292,7 @@ button {
     color: #171616;
 
     grid-row: 3;
-    margin: auto;
+    margin: 1% auto 5% auto;
 }
 .btn_main {
     max-width: 100%;
@@ -320,8 +320,9 @@ button {
     text-transform: uppercase;
 }
 .more_bt a:hover {
-    color: #000;
+    color: #262525;
     background-color: #ffffff;
+    border: 1px solid #262525;
 }
 .contact_bt {
     width: 170px;
@@ -577,7 +578,7 @@ button {
     width: 100%;
     float: left;
     font-size: 36px;
-    color: #030000;
+    color: var(--color-background);
     text-align: center;
     font-weight: 600;
 }

@@ -19,6 +19,10 @@
   --vt-c-text-light-2: rgba(60, 60, 60, 0.66);
   --vt-c-text-dark-1: var(--vt-c-white);
   --vt-c-text-dark-2: rgba(235, 235, 235, 0.64);
+  --color-brand-text: #81A64B;
+  --color-brand-text-2: #7D8C65;
+  --color-brand-text-3: #A8D95F;
+  --color-brand-text-4: #D2F2A2;
 }
 
 /* semantic color variables for this project */

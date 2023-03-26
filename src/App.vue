@@ -60,12 +60,21 @@ nav {
   height: 100%;
 }
 
+nav a {
+  color: var(--color-brand-text)
+}
+
 nav a.router-link-exact-active {
-  color: var(--color-text);
+  color: var(--color-brand-text-3);
 }
 
 nav a.router-link-exact-active:hover {
-  background-color: transparent;
+  border: none;
+  background-color: var(--color-background);
+}
+
+nav a:hover {
+  background-color: var(--color-background);
 }
 
 nav a {
