@@ -11,6 +11,9 @@ export default {
 
 <template>
   <header>
+    <div class="juvi-logo">
+      <img src="././assets/images/juvi-horizontal.png" alt="logo juvi">
+    </div>
     <nav>
       <RouterLink to="/">Home</RouterLink>
       <RouterLink to="/register">Register</RouterLink>
@@ -26,15 +29,21 @@ export default {
 <style>
 header {
   display: flex;
+  justify-content: space-evenly;
+  align-items: center;
   width: 100%;
   max-height: 100vh;
 
   grid-row: 1 / 2;
 }
 
-.logo {
-  display: block;
-  margin: 0 auto 2rem;
+.juvi-logo {
+  height: 6vh;
+  max-height: 100%;
+}
+
+.juvi-logo img {
+  max-height: 100%;
 }
 
 main {
@@ -52,11 +61,11 @@ main div {
 }
 
 nav {
-  font-size: 12px;
+  font-size: 1rem;
   text-align: center;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-end;
   width: 100%;
   height: 100%;
 }
