@@ -1,6 +1,6 @@
 <template>
     <div>
-        <h1>Logging out...</h1>
+        <h1 class="logout">Logging out...</h1>
     </div>
 </template>
 <script>
@@ -22,4 +22,8 @@ export default {
     }
 }
 </script>
-<style></style>
+<style>
+.logout {
+    text-align: center;
+}
+</style>
