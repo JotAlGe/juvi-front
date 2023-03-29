@@ -26,6 +26,11 @@ const router = createRouter({
       path: '/logout',
       name: 'logout',
       component: () => import('../components/Auth/Logout.vue')
+    },
+    {
+      path: '/contact',
+      name: 'contact',
+      component: () => import('../views/ContactView.vue')
     }
   ]
 })

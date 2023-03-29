@@ -17,6 +17,7 @@ export default {
       <router-link :to="isLoggedIn ? '/logout' : '/login'">
         {{ isLoggedIn ? 'Logout' : 'Login' }}
       </router-link>
+      <RouterLink v-if="isLoggedIn" to="/contact">Contact</RouterLink>
     </nav>
   </header>
   <router-view></router-view>
