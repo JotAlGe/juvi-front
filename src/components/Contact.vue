@@ -4,7 +4,7 @@
             <h1 class="work_taital">Contacto</h1>
         </div>
     </div>
-    <div class="contact_section_2" id="contact_section_2">
+    <div class="contact_section_2">
         <div class="col-md-6 padding_0">
             <div><img src="src/assets/images/img-10.png" class="image_10"></div>
         </div>
@@ -33,6 +33,7 @@
         </div>
     </div>
 </template>
+
 <script>
 export default {
 
