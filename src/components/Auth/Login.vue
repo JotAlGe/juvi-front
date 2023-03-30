@@ -7,7 +7,7 @@
             <input type="password" placeholder="password" v-model="password" />
             <button type="submit" class="btn">Login</button>
             <a class="forgot" href="#">Forgot Username?</a>
-            <div v-if="err"> {{ err }} </div>
+            <div v-if="err" class="err"> {{ err }} </div>
         </form>
     </div>
     <!--end log form -->
@@ -79,6 +79,10 @@ export default {
     z-index: 100;
     transform: translateZ(0);
     animation: mltShdSpin 1.7s infinite ease, round 1.7s infinite ease;
+}
+
+.err {
+    color: red;
 }
 
 @keyframes mltShdSpin {
