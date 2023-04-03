@@ -17,10 +17,11 @@ export default {
     <nav>
       <RouterLink to="/">Home</RouterLink>
       <RouterLink to="/register">Register</RouterLink>
+      <RouterLink v-if="isLoggedIn" to="/contact">Contact</RouterLink>
+      <RouterLink v-if="isLoggedIn" to="/messages">Messages</RouterLink>
       <router-link :to="isLoggedIn ? '/logout' : '/login'">
         {{ isLoggedIn ? 'Logout' : 'Login' }}
       </router-link>
-      <RouterLink v-if="isLoggedIn" to="/contact">Contact</RouterLink>
     </nav>
   </header>
   <router-view></router-view>

@@ -67,7 +67,7 @@ export default {
 </script>
 <style>
 .loader {
-    color: #ffffff;
+    color: #262525;
     font-size: 45px;
     text-indent: -9999em;
     overflow: hidden;

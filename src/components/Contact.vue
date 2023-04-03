@@ -4,15 +4,17 @@
             <h1 class="work_taital">Contacto</h1>
         </div>
     </div>
+
     <div v-if="mess" class="success">{{ mess }}</div>
-    <div v-if="err" class="error">{{ err }}</div>
-    <div class="contact_section_2">
+    <div v-else style="color:red;">{{ err }}</div>
+
+    <div v-if="isLoading" class="loader"></div>
+    <div v-else class="contact_section_2">
         <div class="col-md-6 padding_0">
             <div><img src="src/assets/images/img-10.png" class="image_10"></div>
         </div>
         <div class="container-fluid">
             <div class="row">
-
                 <div class="col-md-6">
                     <form class="email_text" @submit.prevent="sendMessage">
                         <div class="form-group">
@@ -24,7 +26,6 @@
                                 v-model="body"></textarea>
                         </div>
                         <div class="send_btn"><button @click="sendMessage" type="button">SEND</button></div>
-
                     </form>
 
                 </div>
@@ -41,7 +42,8 @@ export default {
             title: '',
             body: '',
             mess: '',
-            err: ''
+            err: '',
+            isLoading: false
         }
     },
     methods: {
@@ -55,6 +57,9 @@ export default {
                 body: this.body,
                 user_id: userId
             }
+
+            this.isLoading = true;
+
             fetch('http://127.0.0.1:80/api/messages', {
                 method: 'POST',
                 headers: {
@@ -66,14 +71,16 @@ export default {
             })
                 .then(response => response.json())
                 .then(data => {
+
                     this.mess = data.message;
 
                     this.title = ''
                     this.body = ''
+                    this.isLoading = false
                 })
                 .catch(error => {
+                    this.isLoading = false
                     this.err = error;
-                    console.log(this.err);
                 })
         }
     }
@@ -85,7 +92,7 @@ export default {
     text-align: center;
 }
 
-div.error {
+.error {
     color: red;
     text-align: center;
 }
@@ -107,5 +114,19 @@ div.error {
     background-color: #fff;
     color: #262525;
     border: 1px solid rgba(38, 37, 37);
+}
+
+.loader {
+    color: #262525;
+    font-size: 45px;
+    text-indent: -9999em;
+    overflow: hidden;
+    width: 1em;
+    height: 1em;
+    border-radius: 50%;
+    position: relative;
+    z-index: 100;
+    transform: translateZ(0);
+    animation: mltShdSpin 1.7s infinite ease, round 1.7s infinite ease;
 }
 </style>
