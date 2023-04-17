@@ -1,14 +1,14 @@
 <template>
     <div v-if="isLoading" class="loader"></div>
     <div v-else class="log-form">
-        <h2>Iniciar sesión</h2>
-        <form @submit.prevent="login">
-            <input type="email" placeholder="email" v-model="email" />
-            <input type="password" placeholder="password" v-model="password" />
+        <h1>Iniciar sesión</h1>
+        <form @submit.prevent="login" class="form">
+            <input type="email" placeholder="Correo..." v-model="email" class="email" />
+            <input type="password" placeholder="Contraseña..." v-model="password" class="password" />
             <button type="submit" class="btn">Login</button>
-            <a class="forgot" href="#">Forgot Username?</a>
-            <div v-if="err" class="err"> {{ err }} </div>
+            <!-- <a class="forgot" href="#">Forgot Username?</a> -->
         </form>
+        <p v-if="err" class="err"> {{ err }} </p>
     </div>
     <!--end log form -->
 </template>
@@ -75,15 +75,74 @@ export default {
     height: 1em;
     border-radius: 50%;
     position: relative;
-    ;
     z-index: 100;
     transform: translateZ(0);
     animation: mltShdSpin 1.7s infinite ease, round 1.7s infinite ease;
 }
 
+.btn {
+    width: 170px;
+    margin: auto;
+
+    border: 1px solid #262525;
+    background-color: #05141f;
+    color: #fff;
+    font-size: 16px;
+    padding: 10px 0px;
+    text-transform: uppercase;
+}
+
+.btn:hover {
+    color: #262525;
+    background-color: #fff;
+    border: 1px solid #262525;
+}
+
 .err {
     color: red;
+    text-align: center;
+
+    grid-column: 2 / 3;
 }
+
+h1 {
+    text-align: center;
+}
+
+.form {
+    height: 80%;
+    margin-top: 5%;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(200px, 1fr));
+    grid-template-rows: repeat(5, 1fr);
+}
+
+label {
+    font-weight: bold;
+}
+
+input {
+    width: 100%;
+    height: 5vh;
+    border: none;
+    border-bottom: 1px solid #252525;
+}
+
+.email {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+}
+
+.password {
+    grid-column: 2 / 3;
+    grid-row: 3 / 4;
+}
+
+.btn {
+    grid-column: 2 / 3;
+    grid-row: 5 / 6;
+}
+
 
 @keyframes mltShdSpin {
     0% {

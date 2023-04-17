@@ -1,31 +1,27 @@
 <template>
     <div>
         <h1>Registro de usuario</h1>
-        <form @submit.prevent="register">
-            <label>
-                Nombre:
-                <input type="text" v-model="name">
-            </label>
+        <form @submit.prevent="register" class="form">
+            <div class="name">
+                <input type="text" v-model="name" placeholder="Nombre...">
+            </div>
             <br>
-            <label>
-                Apellido:
-                <input type="text" v-model="lastname">
-            </label>
+            <div class="lastname">
+                <input type="text" v-model="lastname" placeholder="Apellido...">
+            </div>
             <br>
-            <label>
-                Email:
-                <input type="email" v-model="email">
-            </label>
+            <div class="email">
+                <input type="email" v-model="email" placeholder="Correo...">
+            </div>
             <br>
-            <label>
-                Contraseña:
-                <input type="password" v-model="password">
-            </label>
+            <div class="password">
+                <input type="password" v-model="password" placeholder="Contraseña...">
+            </div>
             <br>
-            <button type="submit">Registrar</button>
+            <button type="submit" class="register">Registrar</button>
         </form>
         <p v-if="mess">{{ mess }}</p>
-        <p v-if="errors">{{ errors }}</p>
+        <p v-if="errors" class="error">{{ errors }}</p>
     </div>
 </template>
 
@@ -77,3 +73,90 @@ export default {
     }
 };
 </script>
+<style>
+.error {
+    color: red;
+    text-align: center;
+}
+
+h1 {
+    text-align: center;
+}
+
+.form {
+    height: 80%;
+    margin-top: 5%;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(200px, 1fr));
+    grid-template-rows: repeat(5, 1fr);
+}
+
+label {
+    font-weight: bold;
+}
+
+input {
+    width: 100%;
+    height: 5vh;
+    border: none;
+    border-bottom: 1px solid #252525;
+}
+
+.name {
+    grid-column: 2 / 3;
+}
+
+.lastname {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+}
+
+.email {
+    grid-column: 2 / 3;
+    grid-row: 3 / 4;
+}
+
+.password {
+    grid-column: 2 / 3;
+    grid-row: 4 / 5;
+    margin: auto;
+}
+
+.register {
+    width: 170px;
+    margin: auto;
+
+    border: 1px solid #262525;
+    background-color: #05141f;
+    color: #fff;
+    font-size: 16px;
+    padding: 10px 0px;
+    text-transform: uppercase;
+    grid-column: 2 / 3;
+    grid-row: 5 / 6;
+}
+
+.register:hover {
+    color: #262525;
+    background-color: #fff;
+    border: 1px solid #262525;
+}
+
+@media screen and(max-width: 520px) {
+    .form {
+        width: 100%;
+        height: 80%;
+        margin-top: 5%;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(5, 1fr);
+    }
+
+    .name,
+    .email,
+    .lastname,
+    .password {
+        grid-column-end: 2;
+    }
+}
+</style>
