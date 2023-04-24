@@ -32,7 +32,7 @@ export default {
 
             this.isLoading = true
 
-            fetch('http://127.0.0.1:80/api/auth/login', {
+            fetch('http://127.0.0.1:8000/api/auth/login', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -54,7 +54,10 @@ export default {
                     this.$root.isLoggedIn = true
                     this.$router.push('/')
 
-                    // console.log(data)
+                    /* console.log(data.access_token.user.role) */
+                    if (data.access_token.user.role == "admin") {
+                        this.$root.isAdmin = true
+                    }
                 })
                 .catch(error => {
                     this.err = error

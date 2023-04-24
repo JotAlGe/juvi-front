@@ -3,7 +3,8 @@ import { RouterLink, RouterView } from 'vue-router'
 export default {
   data() {
     return {
-      isLoggedIn: false
+      isLoggedIn: false,
+      isAdmin: false
     };
   },
 }
@@ -18,7 +19,7 @@ export default {
       <RouterLink to="/">Home</RouterLink>
       <RouterLink to="/register">Register</RouterLink>
       <RouterLink v-if="isLoggedIn" to="/contact">Contact</RouterLink>
-      <RouterLink v-if="isLoggedIn" to="/messages">Messages</RouterLink>
+      <RouterLink v-if="isLoggedIn && isAdmin" to="/messages">Messages</RouterLink>
       <router-link :to="isLoggedIn ? '/logout' : '/login'">
         {{ isLoggedIn ? 'Logout' : 'Login' }}
       </router-link>
