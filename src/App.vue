@@ -17,8 +17,8 @@ export default {
     </div>
     <nav>
       <RouterLink to="/">Home</RouterLink>
-      <RouterLink to="/register">Register</RouterLink>
-      <RouterLink v-if="isLoggedIn" to="/contact">Contact</RouterLink>
+      <RouterLink v-if="isLoggedIn ? false : true" to="/register">Register</RouterLink>
+      <RouterLink v-if="isLoggedIn && (isAdmin ? false : true)" to="/contact">Contact</RouterLink>
       <RouterLink v-if="isLoggedIn && isAdmin" to="/messages">Messages</RouterLink>
       <router-link :to="isLoggedIn ? '/logout' : '/login'">
         {{ isLoggedIn ? 'Logout' : 'Login' }}
