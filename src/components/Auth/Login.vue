@@ -20,7 +20,7 @@ export default {
             email: '',
             password: '',
             err: '',
-            isLoading: false
+            isLoading: false,
         }
     },
     methods: {
@@ -50,7 +50,7 @@ export default {
                 .then(data => {
                     this.email = ''
                     this.password = ''
-                    localStorage.setItem('token', data.access_token);
+                    this.token = localStorage.setItem('token', data.access_token);
                     this.$root.isLoggedIn = true
                     this.$router.push('/')
 
