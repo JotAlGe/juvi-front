@@ -50,10 +50,10 @@ export default {
                 .then(data => {
                     this.email = ''
                     this.password = ''
-                    this.token = localStorage.setItem('token', data.access_token);
+                    localStorage.setItem('token', data.access_token);
                     this.$root.isLoggedIn = true
                     this.$router.push('/')
-
+                    this.$root.tok = data.access_token.token
                     /* console.log(data.access_token.user.role) */
                     if (data.access_token.user.role == "admin") {
                         this.$root.isAdmin = true
