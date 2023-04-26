@@ -4,7 +4,8 @@ export default {
   data() {
     return {
       isLoggedIn: false,
-      isAdmin: false
+      isAdmin: false,
+      tok: ''
     };
   },
 }
