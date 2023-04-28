@@ -35,7 +35,7 @@ header {
   justify-content: space-evenly;
   align-items: center;
   width: 100%;
-  max-height: 100vh;
+  max-height: 10vh;
 
   grid-row: 1 / 2;
 }

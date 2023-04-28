@@ -268,7 +268,9 @@ button {
     text-align: center;
 }
 
-.banner_taital {
+.banner_taital,
+h2,
+.work_taital {
     width: 100%;
     font-size: 60px;
     color: #A8D95F;
@@ -632,14 +634,14 @@ button {
     position: relative;
 }
 
-.work_taital {
+/* .work_taital {
     width: 100%;
     float: left;
     font-size: 36px;
     color: var(--color-background);
     text-align: center;
     font-weight: 600;
-}
+} */
 
 .works_section_2 {
     width: 100%;
@@ -876,7 +878,8 @@ input.mail_text::placeholder {
         flex-direction: column;
     }
 
-    .banner_taital {
+    .banner_taital,
+    h2 {
         font-size: 50px;
     }
 

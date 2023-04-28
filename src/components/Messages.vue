@@ -1,13 +1,11 @@
 <template>
-    <div>
-        <h2>Mensajes</h2>
-        <p v-for="message in messages" :key="message.id">
-            Título: {{ message.title }}
-            <br>
-            Mensaje: {{ message.body }}
-            <hr>
-        </p>
-    </div>
+    <h2>Mensajes</h2>
+    <p v-for="message in messages" :key="message.id">
+        <label for="">Título:</label> {{ message.title }}
+        <br>
+        <label for="">Mensaje:</label> {{ message.body }}
+        <hr>
+    </p>
 </template>
 <script>
 export default {
@@ -34,4 +32,13 @@ export default {
     },
 }
 </script>
-<style></style>
+<style>
+label {
+    font-weight: bold;
+    color: #252626;
+}
+
+p {
+    font-weight: 400;
+}
+</style>
