@@ -1,7 +1,7 @@
 <template>
     <div class="contact_section layout_padding">
         <div class="container">
-            <h1 class="work_taital">Contacto</h1>
+            <h2 class="work_taital">Contacto</h2>
         </div>
     </div>
 
