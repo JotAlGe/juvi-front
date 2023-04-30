@@ -1,7 +1,7 @@
 <template>
     <div v-if="isLoading" class="loader"></div>
     <div v-else class="log-form">
-        <h1>Iniciar sesión</h1>
+        <h2>Iniciar sesión</h2>
         <form @submit.prevent="login" class="form">
             <input type="email" placeholder="Correo..." v-model="email" class="email" />
             <input type="password" placeholder="Contraseña..." v-model="password" class="password" />
@@ -193,6 +193,17 @@ input {
 
     100% {
         transform: rotate(360deg)
+    }
+}
+
+@media screen and (max-width: 520px) {
+    .form {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .form input {
+        width: 100%;
     }
 }
 </style>

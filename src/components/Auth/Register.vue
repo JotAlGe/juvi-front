@@ -1,6 +1,6 @@
 <template>
     <div>
-        <h1>Registro de usuario</h1>
+        <h2 class="register_user">Registro de usuario</h2>
         <form @submit.prevent="register" class="form">
             <div class="name">
                 <input type="text" v-model="name" placeholder="Nombre...">
@@ -144,19 +144,14 @@ input {
 
 @media screen and(max-width: 520px) {
     .form {
-        width: 100%;
-        height: 80%;
-        margin-top: 5%;
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: repeat(5, 1fr);
+        display: flex;
+        flex-direction: column;
     }
 
-    .name,
-    .email,
-    .lastname,
-    .password {
-        grid-column-end: 2;
+    .form input {
+        align-content: space-around;
+        width: 100%;
     }
+
 }
 </style>
